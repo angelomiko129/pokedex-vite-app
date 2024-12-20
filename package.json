@@ -1,7 +1,6 @@
 {
   "name": "pokedex-vite-app",
   "private": true,
-  "homepage": "https://angelomiko129.github.io/<repo>",
   "version": "0.0.0",
   "type": "module",
   "scripts": {
