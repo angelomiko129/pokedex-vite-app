@@ -1,6 +1,5 @@
 import { useState } from "react";
 import pokeshallow from "./../assets/pokeball-shallow.svg";
-import { FaReact } from "react-icons/fa";
 
 const PokemonCard = ({ pokemon, typeColors }) => {
   const { id, name, image, cry, types } = pokemon;

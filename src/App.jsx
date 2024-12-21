@@ -9,7 +9,6 @@ import clsx from "clsx";
 function App() {
   const [pokemonResults, setPokemonResults] = useState([]);
   const [error, setError] = useState(false);
-  const [isSearchChanged, setIsSearchChanged] = useState(false);
   const [selectedType, setSelectedType] = useState(null);
   const [allTypes, setAllTypes] = useState(new Set());
 
@@ -46,8 +45,8 @@ function App() {
         const filteredPokemon = parsedPokemonData.filter((pokemon) =>
           pokemon.name.startsWith(searchPokemon.toLowerCase()),
         );
-
         setPokemonResults(filteredPokemon);
+        return;
       }
 
       const response = await fetch(
@@ -91,8 +90,6 @@ function App() {
 
       setAllTypes(typesSet);
       setError(false);
-      setIsSearchChanged(false);
-      setError(false);
       setPokemonResults(sortedResults);
     } catch (err) {
       console.log(err);
@@ -106,6 +103,7 @@ function App() {
       ? pokemonResults.filter((pokemon) => pokemon.types.includes(selectedType))
       : pokemonResults;
   }, [pokemonResults, selectedType]);
+  console.log(filteredResults);
 
   useEffect(() => {
     fetchPokeData();
@@ -158,10 +156,10 @@ function App() {
         ))}
       </div>
       {/* Pokemon validation */}
-      {isSearchChanged && error ? (
-        <div className="mt-10 flex justify-center text-red-400">
+      {filteredResults.length === 0 ? (
+        <div className="mt-10 flex justify-center text-white">
           <div className="text-center">
-            <h2 className="fluid">No results found</h2>
+            <h2 className="fluid">No results found :)</h2>
           </div>
         </div>
       ) : (

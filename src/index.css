@@ -2,14 +2,3 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-@layer base {
-  h1 {
-    @apply text-fluid-xxxl;
-  }
-}
-
-@font-face {
-  font-family: "Pokemon";
-  src: local("Pokemon"), url(/public/fonts/Pokemon-Hollow.ttf) format(truetype);
-}
