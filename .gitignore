@@ -13,6 +13,7 @@ dist-ssr
 *.local
 .prettierrc
 eslint.config.js
+todo.txt
 
 # Editor directories and files
 .vscode/*
