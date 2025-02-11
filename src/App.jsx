@@ -1,12 +1,12 @@
 import { useState } from "react";
-import Nav from "./components/Nav";
-import Search from "./components/Search";
-import PokemonCard from "./components/PokemonCard";
-import TypeFilter from "./components/TypeFilter";
-import pokeBg from "/src/assets/pokebg.svg";
-import pokeRepeat from "/src/assets/pokerepeat.svg";
-import { typeColors } from "./constants/typecolor";
-import { usePokemonData } from "./hooks/usePokemonData";
+import Nav from "@components/Nav";
+import Search from "@components/Search";
+import PokemonCard from "@components/PokemonCard";
+import TypeFilter from "@components/TypeFilter";
+import pokeBg from "@assets/pokebg.svg";
+import pokeRepeat from "@assets/pokerepeat.svg";
+import { typeColors } from "@constants/typecolor";
+import { usePokemonData } from "@hooks/usePokemonData";
 
 function App() {
   const [selectedType, setSelectedType] = useState(null);

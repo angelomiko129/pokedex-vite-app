@@ -1,5 +1,5 @@
 import { useState } from "react";
-import pokeball from "/src/assets/pokeball.svg";
+import pokeball from "@assets/pokeball.svg";
 
 const Search = ({ fetchPokeData }) => {
   const [query, setQuery] = useState("");

@@ -1,5 +1,5 @@
 import { useState } from "react";
-import pokeshallow from "./../assets/pokeball-shallow.svg";
+import pokeshallow from "@assets/pokeball-shallow.svg";
 
 const PokemonCard = ({ pokemon, typeColors }) => {
   const { id, name, image, cry, types } = pokemon;

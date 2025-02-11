@@ -1,5 +1,5 @@
 import clsx from "clsx";
-import { typeColors } from "../constants/typecolor";
+import { typeColors } from "@constants/typecolor";
 
 const TypeFilter = ({ selectedType, setSelectedType }) => {
   return (
